@@ -18,6 +18,7 @@ runs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+      shell: bash
     - name: Pass inputs to shell
       run: echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
       shell: bash
@@ -25,4 +26,4 @@ runs:
       id: get_square
       run: |
         python src/get_num_square.py
-      shell: |
+      shell: bash
